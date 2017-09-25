@@ -51,7 +51,24 @@ public class Weapon : MonoBehaviour {
 
         if (hit.collider != null) {
 			Debug.DrawLine (firePointPosition, hit.point, Color.red);
-		}
 
-	}
+            if (hit.collider.tag == "Enemy")
+            {
+                Debug.Log("shooting enemy");
+            }
+        }
+       
+        
+
+        //if (hit.rigidbody)
+        //{
+        //    if (hit.rigidbody.tag == "Enemy")
+        //    {
+        //        Debug.Log("shooting enemy");
+        //    }
+        //}
+        
+            
+
+    }
 }
